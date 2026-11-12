@@ -291,14 +291,13 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
-python scripts/build_notebook.py --execute
-python scripts/update_readme.py
-python scripts/verify_portfolio.py
+python src/credit_risk.py --data data/raw/train.csv --output reports
 ```
 
-For the same analytical run through the CLI, use `python src/credit_risk.py --data data/raw/train.csv --output reports`, then refresh this README. The recommendations CSV is produced by the notebook. Sample runs use `--sample 5000 --output reports/smoke` to preserve published full-data evidence.
+The command runs the shared analysis and regenerates its numerical reports. To reproduce the complete narrative, open the saved notebook in a Jupyter-compatible editor and run all cells using the installed environment. The recommendations CSV is produced by the notebook. Sample runs use `--sample 5000 --output reports/smoke` to preserve published full-data evidence.
 
-The README is rendered from JSON/CSV results and a versioned [report template](vehicle-loan-default-prediction/scripts/templates/README.md.in), preserving the narrative when its numbers are refreshed. The reference environment used Python **3.11.14**; exact versions are in `requirements.txt` and `metrics.json`. A fresh-environment installation has not been independently verified.
+This report interprets the saved JSON/CSV results. Generator and verification helpers under `scripts/` are local tools excluded by the current Git ignore rules; the published Python pipeline and notebook provide the reproduction paths. After a new analytical run, reconcile this report with the updated evidence before publishing. The reference environment used Python **3.11.14**; exact versions are in `requirements.txt` and `metrics.json`. A fresh-environment installation has not been independently verified.
 
 Attribution: [LTFS / Analytics Vidhya](https://www.analyticsvidhya.com/datahack/contest/ltfs-datascience-finhack-an-online-hackathon/) and the [Kaggle mirror](https://www.kaggle.com/datasets/avikpaul4u/vehicle-loan-default-prediction). Raw data is not redistributed; see [Data](vehicle-loan-default-prediction/data/README.md). Method references are linked in the notebook and [Methodology](vehicle-loan-default-prediction/METHODOLOGY.md).
+
 # vehicle-loan-risk-analytics
