@@ -1,0 +1,24 @@
+{
+  "scope": "training and validation only; challengers do not replace the primary family selection",
+  "ablation_count": 4,
+  "challenger_count": 3,
+  "cv_folds": 5,
+  "cv_auc_mean": 0.6758314048509042,
+  "cv_auc_std": 0.001949494035129366,
+  "model_seeds": [
+    42,
+    7,
+    123,
+    2024
+  ],
+  "seed_validation_auc_range": 0.00021130225167342864,
+  "sensitivity_scenarios": 45,
+  "primary_training_auc": 0.7204435568539465,
+  "blend_validation_auc": 0.6733077090031079,
+  "notes": [
+    "Outer-fold evaluation rebuilds imputation and target encoding in every fold.",
+    "The model family was selected using a separate validation set before its training-only CV diagnostics.",
+    "Seed experiments change estimator randomness while holding data split and encoding fixed.",
+    "A small challenger grid is exploratory and not an exhaustive hyperparameter search."
+  ]
+}

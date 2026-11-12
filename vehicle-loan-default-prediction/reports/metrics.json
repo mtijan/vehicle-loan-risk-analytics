@@ -1,0 +1,204 @@
+{
+  "run_type": "full_dataset",
+  "config": {
+    "seed": 42,
+    "test_size": 0.2,
+    "validation_size": 0.2,
+    "max_review_share": 0.25,
+    "loss_given_default": 0.45,
+    "lost_margin": 0.08,
+    "jobs": 4,
+    "sample": null,
+    "extended": true
+  },
+  "python": "3.11.14",
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scikit-learn": "1.4.2",
+    "matplotlib": "3.8.4",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.7.0",
+    "catboost": "1.2.10"
+  },
+  "data_sha256": "bc3cfef743b956daf3f6142853f6272605f7bb425e2e0ad5de3b87da10e7c5f6",
+  "rows_analyzed": 233154,
+  "default_count": 50611,
+  "default_rate": 0.2170711203753742,
+  "splits": {
+    "train": {
+      "rows": 139892,
+      "default_rate": 0.2170746004060275
+    },
+    "validation": {
+      "rows": 46631,
+      "default_rate": 0.21706590036670884
+    },
+    "test": {
+      "rows": 46631,
+      "default_rate": 0.21706590036670884
+    }
+  },
+  "selected_model": "LightGBM",
+  "feature_count": 50,
+  "selection_metric": "validation ROC-AUC; no test-based model selection",
+  "validation_policy": {
+    "threshold": 0.585,
+    "roc_auc": 0.672967127187078,
+    "average_precision": 0.35553646415820045,
+    "recall": 0.4161232957913456,
+    "precision": 0.3617624323627931,
+    "specificity": 0.7964611465666,
+    "accuracy": 0.7139027685445305,
+    "review_share": 0.24968368681778216,
+    "tn": 29078,
+    "fp": 7431,
+    "fn": 5910,
+    "tp": 4212,
+    "scenario_cost": 176937804.91077402,
+    "approve_all_cost": 247676386.32938266,
+    "scenario_cost_reduction": 0.2856089046960416
+  },
+  "test_policy": {
+    "threshold": 0.585,
+    "roc_auc": 0.6735076770188331,
+    "average_precision": 0.3528936577307219,
+    "recall": 0.4217545939537641,
+    "precision": 0.35870935215528105,
+    "specificity": 0.7909556547700567,
+    "accuracy": 0.7108146940876241,
+    "review_share": 0.255216486886406,
+    "tn": 28877,
+    "fp": 7632,
+    "fn": 5853,
+    "tp": 4269,
+    "scenario_cost": 176417428.38940758,
+    "approve_all_cost": 247676386.32938266,
+    "scenario_cost_reduction": 0.287709938747283
+  },
+  "test_at_050": {
+    "threshold": 0.5,
+    "roc_auc": 0.6735076770188331,
+    "average_precision": 0.3528936577307219,
+    "recall": 0.6389053546729895,
+    "precision": 0.3129900300067757,
+    "specificity": 0.6111917609356597,
+    "accuracy": 0.6172074371126504,
+    "review_share": 0.4430957946430486,
+    "tn": 22314,
+    "fp": 14195,
+    "fn": 3655,
+    "tp": 6467,
+    "scenario_cost": 151183789.04715782,
+    "approve_all_cost": 247676386.32938266,
+    "scenario_cost_reduction": 0.3895914290105161
+  },
+  "test_approve_all": {
+    "threshold": 1.0,
+    "roc_auc": 0.5,
+    "average_precision": 0.21706590036670884,
+    "recall": 0.0,
+    "precision": 0.0,
+    "specificity": 1.0,
+    "accuracy": 0.7829340996332912,
+    "review_share": 0.0,
+    "tn": 36509,
+    "fp": 0,
+    "fn": 10122,
+    "tp": 0,
+    "scenario_cost": 247676386.32938266,
+    "approve_all_cost": 247676386.32938266,
+    "scenario_cost_reduction": 0.0
+  },
+  "cost_assumptions": {
+    "average_training_loan": 54375.81205501387,
+    "cost_fn": 24469.11542475624,
+    "cost_fp": 4350.06496440111,
+    "interpretation": "illustrative cost units; no verified realized savings"
+  },
+  "exploration": {
+    "partition": "training only",
+    "training_rows": 139892,
+    "chart_count": 15,
+    "charts": [
+      "missingness",
+      "target_distribution",
+      "financial_distributions",
+      "loan_amount_default_rates",
+      "ltv_default_rates",
+      "bureau_score_presence",
+      "bureau_categories",
+      "employment_default_rates",
+      "inquiries_default_rates",
+      "delinquency_default_rates",
+      "age_default_rates",
+      "monthly_default_rates",
+      "entity_concentration",
+      "correlation_matrix",
+      "ltv_bureau_interaction"
+    ],
+    "duplicate_application_ids": 0,
+    "duplicate_full_rows": 0,
+    "training_ltv_above_80_default_rate": 0.25818972524792716,
+    "training_ltv_at_most_80_default_rate": 0.1947642362489524,
+    "training_zero_bureau_score_share": 0.5027020844651588,
+    "invalid_age_count": 0,
+    "disbursal_start": "2018-08-01",
+    "disbursal_end": "2018-10-31",
+    "notes": [
+      "Rate intervals are pointwise 95% Wilson intervals, not multiple-comparison adjusted.",
+      "Financial histograms clip display values at p99 and use logarithmic count axes; model inputs are not clipped.",
+      "Monthly training comparisons are not out-of-time model validation.",
+      "Bureau descriptions with fewer than 500 applications remain in CSV but are omitted from the chart."
+    ]
+  },
+  "extended_experiments": {
+    "scope": "training and validation only; challengers do not replace the primary family selection",
+    "ablation_count": 4,
+    "challenger_count": 3,
+    "cv_folds": 5,
+    "cv_auc_mean": 0.6758314048509042,
+    "cv_auc_std": 0.001949494035129366,
+    "model_seeds": [
+      42,
+      7,
+      123,
+      2024
+    ],
+    "seed_validation_auc_range": 0.00021130225167342864,
+    "sensitivity_scenarios": 45,
+    "primary_training_auc": 0.7204435568539465,
+    "blend_validation_auc": 0.6733077090031079,
+    "notes": [
+      "Outer-fold evaluation rebuilds imputation and target encoding in every fold.",
+      "The model family was selected using a separate validation set before its training-only CV diagnostics.",
+      "Seed experiments change estimator randomness while holding data split and encoding fixed.",
+      "A small challenger grid is exploratory and not an exhaustive hyperparameter search."
+    ]
+  },
+  "operations": {
+    "status": "offline routing and monitoring demonstration; integration remains a design",
+    "low_score_threshold": 0.36,
+    "high_score_threshold": 0.585,
+    "low_queue_validation_max_observed_default_rate": 0.1,
+    "low_queue_validation_min_share": 0.05,
+    "routing_actions": {
+      "Lower-score queue": "Normal underwriting; no automatic approval",
+      "Standard review": "Standard assessment with supporting evidence",
+      "Priority review": "Prioritize human review; no automatic rejection"
+    },
+    "monitoring_scope": "training reference vs random validation split; no live drift or future-period evidence",
+    "bootstrap_repetitions": 200,
+    "bootstrap_scope": "pointwise stratified row intervals, conditional on observed prevalence and frozen model; no fitting uncertainty"
+  },
+  "limitations": [
+    "Random application split; no out-of-time or unseen-entity validation.",
+    "Validation set reused for model selection and policy choice; selection uncertainty remains.",
+    "Class-weighted scores are uncalibrated and are not probability-of-default estimates.",
+    "Review cap is fitted on validation; test or future flag rates can exceed it.",
+    "Cost scenario assumes every flagged default loss is avoided and charges margin only for flagged non-defaults.",
+    "Review does not itself prevent default; workload costs and actual interventions are not modeled.",
+    "Geographic, staff, age, and identity-document features need fairness and availability review.",
+    "Previously explored public dataset; held-out results are an internal benchmark, not external validation."
+  ]
+}

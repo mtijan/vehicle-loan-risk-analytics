@@ -1,0 +1,3 @@
+experiment,validation_roc_auc,validation_average_precision
+Primary selected model,0.672967127187078,0.35553646415820045
+Fixed blend: XGB 0.35 / LGBM 0.35 / Cat 0.30,0.6733077090031079,0.35651927512817905

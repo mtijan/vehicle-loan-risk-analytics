@@ -1,0 +1,6 @@
+finding,recommendation
+Test recall 42.2% at 25.5% flagged share,"Pilot prioritized human review; measure missed defaults, workload, and intervention effectiveness"
+Training default 25.8% above 80% LTV vs 19.5% otherwise,Investigate loan structure with verified affordability data before changing terms
+Removing sourcing/geographic IDs changes validation AUC by -0.0236,Test future-period and unseen-entity transfer; examine proxies and subgroup outcomes
+Four-seed validation AUC range 0.0002,Version the experiment and validate challengers prospectively
+45 cost/capacity scenarios use assumed operating costs,"Collect review time, recoveries, lost margins, and intervention outcomes"

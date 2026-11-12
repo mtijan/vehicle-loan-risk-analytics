@@ -1,0 +1,7 @@
+signal,cadence,response
+"Schema, missingness, invalid values",Every scoring batch,Quarantine malformed inputs; inspect upstream changes
+Unseen sourcing categories and PSI,Compare each batch with training reference,Investigate population changes; thresholds require prospective calibration
+Flagged share vs review capacity,Daily queue review,Escalate capacity shortfalls; do not silently change the model cutoff
+"ROC-AUC, AP, recall, calibration, subgroup outcomes",Once outcome labels mature,Compare with frozen reference; investigate changes before retraining
+"Human overrides, review costs, intervention results",Pilot review cycle,Replace illustrative costs with observed operational evidence
+Versioned challenger evaluation,When data or policy changes justify a review,Validate on a new future-period holdout and retain a rollback version

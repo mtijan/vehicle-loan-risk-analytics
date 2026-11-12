@@ -1,0 +1,4 @@
+experiment,validation_roc_auc,validation_average_precision,changed_parameters
+Primary selected model,0.672967127187078,0.35553646415820045,
+Smaller trees (15 leaves),0.672341188357986,0.35440742313543605,"{""num_leaves"": 15}"
+Stronger regularization,0.6730010433017388,0.3557089460925934,"{""min_child_samples"": 200, ""reg_lambda"": 20}"

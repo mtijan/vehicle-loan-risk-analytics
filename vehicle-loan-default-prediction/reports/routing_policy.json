@@ -1,0 +1,15 @@
+{
+  "status": "offline routing and monitoring demonstration; integration remains a design",
+  "low_score_threshold": 0.36,
+  "high_score_threshold": 0.585,
+  "low_queue_validation_max_observed_default_rate": 0.1,
+  "low_queue_validation_min_share": 0.05,
+  "routing_actions": {
+    "Lower-score queue": "Normal underwriting; no automatic approval",
+    "Standard review": "Standard assessment with supporting evidence",
+    "Priority review": "Prioritize human review; no automatic rejection"
+  },
+  "monitoring_scope": "training reference vs random validation split; no live drift or future-period evidence",
+  "bootstrap_repetitions": 200,
+  "bootstrap_scope": "pointwise stratified row intervals, conditional on observed prevalence and frozen model; no fitting uncertainty"
+}
