@@ -1,0 +1,36 @@
+{
+  "partition": "training only",
+  "training_rows": 139892,
+  "chart_count": 15,
+  "charts": [
+    "missingness",
+    "target_distribution",
+    "financial_distributions",
+    "loan_amount_default_rates",
+    "ltv_default_rates",
+    "bureau_score_presence",
+    "bureau_categories",
+    "employment_default_rates",
+    "inquiries_default_rates",
+    "delinquency_default_rates",
+    "age_default_rates",
+    "monthly_default_rates",
+    "entity_concentration",
+    "correlation_matrix",
+    "ltv_bureau_interaction"
+  ],
+  "duplicate_application_ids": 0,
+  "duplicate_full_rows": 0,
+  "training_ltv_above_80_default_rate": 0.25818972524792716,
+  "training_ltv_at_most_80_default_rate": 0.1947642362489524,
+  "training_zero_bureau_score_share": 0.5027020844651588,
+  "invalid_age_count": 0,
+  "disbursal_start": "2018-08-01",
+  "disbursal_end": "2018-10-31",
+  "notes": [
+    "Rate intervals are pointwise 95% Wilson intervals, not multiple-comparison adjusted.",
+    "Financial histograms clip display values at p99 and use logarithmic count axes; model inputs are not clipped.",
+    "Monthly training comparisons are not out-of-time model validation.",
+    "Bureau descriptions with fewer than 500 applications remain in CSV but are omitted from the chart."
+  ]
+}
