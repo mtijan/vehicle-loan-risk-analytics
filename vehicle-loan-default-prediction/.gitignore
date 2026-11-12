@@ -1,0 +1,26 @@
+# Data and local source materials
+data/raw/*
+!data/raw/.gitkeep
+*.xlsx
+*.docx
+*.pdf
+_academic_archive/
+_local_work/
+scripts/
+
+# Environments, credentials, runtime artifacts
+.venv/
+venv/
+.env
+.env.*
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+catboost_info/
+*.joblib
+*.pkl
+reports/smoke/
+reports/verification/
+.DS_Store
+Thumbs.db
